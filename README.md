@@ -1,4 +1,10 @@
-# Prueba Tecnica  
+# Prueba Tecnica 
+
+## Ejecución
+* clonar el repositorio
+* instalar los modulos con npm run install
+* ejecutar el comando npx expo start
+* dependiendo del dispositivo en la terminal selecciónar si es para hacerlo en anddroid o ios
 
 ## Desarrollo
 Esta app muestra planetas del sistema solar, se desarrollo bajo el framework de expo
