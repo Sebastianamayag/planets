@@ -14,8 +14,13 @@ import { heightPercentageToDP } from "react-native-responsive-screen";
 
 // function to get all planets
 const getPlanets = async (): Promise<any> => {
-  const { data } = await planetApi.get("?filter[]=isPlanet,eq,true");
-  return data.bodies;
+  try {
+    const { data } = await planetApi.get("?filter[]=isPlanet,eq,true");
+    return data.bodies;
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
 };
 
 export default function Home() {

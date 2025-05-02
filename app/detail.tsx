@@ -13,8 +13,13 @@ import { fav, getFavorites } from "@/utils/fav";
 
 // function to get one planet
 const getPlanet = async (id: any): Promise<any> => {
-  const { data } = await planetApi.get(`/${id}`);
-  return data;
+  try {
+    const { data } = await planetApi.get(`/${id}`);
+    return data;
+  } catch (error) {
+    console.log(error);
+    return {};
+  }
 };
 
 const detail = () => {

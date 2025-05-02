@@ -27,6 +27,11 @@ export const fav = async (
 
 // Function to get favorites from the storage
 export const getFavorites = async (): Promise<any[]> => {
-  const data = await AsyncStorage.getItem("favorites");
-  return data ? JSON.parse(data) : [];
+  try {
+    const data = await AsyncStorage.getItem("favorites");
+    return data ? JSON.parse(data) : [];
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
 };
