@@ -17,10 +17,7 @@ function RootLayoutNav() {
   return (
     <SafeAreaProvider>
       <QueryClientProvider client={queryClient}>
-        <Stack
-          initialRouteName="(tabs)"
-          screenOptions={{ headerTintColor: Colors.dark.background }}
-        >
+        <Stack screenOptions={{ headerTintColor: Colors.dark.background }}>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen
             name="detail"
